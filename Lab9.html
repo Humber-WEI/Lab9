@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab 9</title>
+    </head>
+    <body>
+        <div id="p1"></div>
+        <script>
+
+            const inventory = new Inventory();
+
+            function Inventory (productID, name, quantity){
+                this.productID = productID;
+                this.name = name;
+                this.quantity = quantity;
+            };
+
+            function addProduct(productID, name, quantity){
+                inventory.productID = productID;
+                inventory.name = name;
+                inventory.quantity = quantity;
+            }
+
+            function displayInventory () {
+                console.log("Product ID is: " + inventory.productID + "\n" + "Product name is: " + inventory.name + "\n" + "Product quantity is: " + inventory.quantity);
+            }
+
+            function findProduct(productID) {
+                if (productID == inventory.productID) {
+                    console.log("Product ID is: " + inventory.productID + "\n" + "Product name is: " + inventory.name + "\n" + "Product quantity is: " + inventory.quantity);
+                } else if (productID != inventory.productID) {
+                    console.log("Product is not found");
+                }
+            }
+
+            addProduct(1,"car",20);
+            displayInventory();
+            findProduct(1);
+            findProduct(2);
+        </script>
+    </body>
+</html>
