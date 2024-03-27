@@ -7,13 +7,7 @@
         <div id="p1"></div>
         <script>
 
-            const inventory = new Inventory();
-
-            function Inventory (productID, name, quantity){
-                this.productID = productID;
-                this.name = name;
-                this.quantity = quantity;
-            };
+            const inventory = new Object();
 
             function addProduct(productID, name, quantity){
                 inventory.productID = productID;
